@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
         pathname: "/**",
         search: "",
       },
+      {
+        protocol: "https",
+        hostname: "image.tmdb.org",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
   webpack: (config) => {

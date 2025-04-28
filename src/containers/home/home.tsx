@@ -4,8 +4,7 @@ import Footer from "@/components/shared/footer";
 import WrapperSection from "./lib/wrapper-section";
 import { useActiveSectionStore } from "@/hooks/stores/use-active-section";
 import TopPicks from "./lib/top-picks";
-import FormExample from "./lib/form-example";
-import FormRegister from "./lib/form-register";
+import MovieList from "./lib/movie-list";
 
 export default function HomeContainer() {
   const { setActiveSection } = useActiveSectionStore();
@@ -40,24 +39,13 @@ export default function HomeContainer() {
       <WrapperSection
         setData={(data) => {
           setActiveSection({
-            title: "Form Playground 📝",
+            title: "Movie Section",
             sectionId: data,
           });
         }}
-        data="section_form"
+        data="section_movie"
       >
-        <FormRegister />
-      </WrapperSection>
-      <WrapperSection
-        setData={(data) => {
-          setActiveSection({
-            title: "Form Playground 📝",
-            sectionId: data,
-          });
-        }}
-        data="section_form"
-      >
-        <FormExample />
+        <MovieList />
       </WrapperSection>
       <Footer />
     </div>

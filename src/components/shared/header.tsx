@@ -7,7 +7,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Button } from "@/components/ui/button";
-import { FormInputIcon, HomeIcon } from "lucide-react";
+import { ClapperboardIcon, HomeIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Separator } from "@/components/ui/separator";
@@ -22,18 +22,15 @@ const navItems = [
     tooltip: "Your Movie Hub 🎥",
   },
   {
-    id: "btn-form",
-    sectionId: "section_form",
-    icon: FormInputIcon,
-    tooltip: "Form Playground 📝",
+    id: "btn-movie",
+    sectionId: "section_movie",
+    icon: ClapperboardIcon,
+    tooltip: "Movie Playground 🎬",
   },
 ];
 
 export default function Header() {
-  const { activeSection, test, test2 } = useActiveSectionStore();
-
-  console.log("test", test);
-  console.log("test2", test2);
+  const { activeSection } = useActiveSectionStore();
 
   return (
     <div className="p-4 bg-secondary/50 rounded-2xl flex items-center justify-between border gap-3 shadow-lg w-full sticky top-4 z-50">

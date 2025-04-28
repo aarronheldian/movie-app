@@ -33,7 +33,7 @@ const FormSchema = z.object({
   }),
 });
 
-export default function FormExample() {
+export default function FormLogin() {
   const { logIn } = useAuth();
   const router = useRouter();
 
